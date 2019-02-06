@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+      <!-- Our CSS -->
+      <link rel="stylesheet" href="main.css">
+
+
+      <!-- Google Fonts Goes Here -->
+      <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Sarabun" rel="stylesheet">
+
+
+      <!-- Mapbox GL CSS -->
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/0.50.0/mapbox-gl.css' rel='stylesheet' />
+
+
+    <title>The Search for Sasquatch</title>
+  </head>
+  <body>
+
+
+<div class="header">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+</div>
+
+
+      <!-- Title -->
+    <section id="title">
+      <div class="container-fluid">
+        <div class="row">
+
+
+          <div class="col-md-12 pad title-color">
+              <i><center><h1 class="title-color">The Search for Sasquatch</h1></center></i>
+          </div>
+
+
+        </div>
+        </div></section>
+
+           <!-- Main Idea -->
+    <section id="main-idea">
+      <div class="container-fluid">
+        <div class="row">
+
+
+          <div class="col-md-12 pad mi-color">
+              <p>Main idea</p>
+          </div>
+
+
+        </div>
+        </div></section>
+
+                 <!-- Main Idea 2 -->
+    <section id="main-idea2">
+      <div class="container-fluid">
+        <div class="row">
+
+
+          <div class="col-md-12 pad mi2-color">
+              <p>Main idea 2</p>
+          </div>
+
+
+        </div>
+        </div></section>
+
+
+
+
+    <!-- Map -->
+    <section id="map-div">
+      <div class="container-fluid map-color">
+        <div class="row">
+
+          <div class="col-md-2 pad">
+              <h3>Map</h3>
+          </div>
+          <div class="col-md-5 pad">
+              <div id="map"></div>
+          </div>
+               <div class="col-md-5 pad">
+           <p><a id="btn1" href="#">Class A:</a> A series of encounters on Haga Ridge near the Wayne National Forest</p>
+ 			<p><a id="btn2" href="#">Class A:</a> Homeowner across the street from East Fork State Park (30mi SE of Cincinnati) describes possible encounter at night</p>
+ 			<p><a id="btn3" href="#">Class B:</a> Possible track lines and vocalizations found in a rural neighborhood outside St. Clairsville</p>
+ 					<a id="btn4" class="btn btn-primary" href="#" role="button">Zoom out</a>
+          </div>
+
+        </div>
+      </div>
+
+
+           <!-- Moody 1 -->
+    <section id="moody1">
+      <div class="container-fluid">
+        <div class="row">
+
+
+          <div class="col-md-12 pad moody1-color">
+              <p>Moody 1</p>
+          </div>
+
+
+        </div>
+        </div></section>
+
+                 <!-- Moody 2 -->
+    <section id="moody2">
+      <div class="container-fluid">
+        <div class="row">
+
+
+          <div class="col-md-12 pad moody2-color">
+              <p>Moody 2</p>
+          </div>
+
+
+        </div>
+        </div></section>
+
+
+        <!-- Myth -->
+    <section id="myth">
+      <div class="container-fluid">
+        <div class="row">
+
+
+          <div class="col-md-12 pad myth-color">
+              <p>Mythology</p>
+          </div>
+
+
+        </div>
+        </div></section>
+
+
+      <!-- Witnesses Part 1 -->
+    <section id="wit1">
+      <div class="container-fluid">
+        <div class="row">
+
+
+          <div class="col-md-12 pad wit1-color">
+              <p>Witnesses</p>
+          </div>
+
+
+        </div>
+        </div></section>
+
+                 <!-- Witnesses Part 2 -->
+    <section id="wit2">
+      <div class="container-fluid">
+        <div class="row">
+
+
+          <div class="col-md-12 pad wit2-color">
+              <p>Witnesses</p>
+          </div>
+
+
+        </div>
+        </div></section>
+
+
+          <!-- Science -->
+    <section id="sci">
+      <div class="container-fluid">
+        <div class="row">
+
+
+          <div class="col-md-12 pad sci-color">
+              <p>Science</p>
+          </div>
+
+
+        </div>
+        </div></section>
+
+              <!-- End -->
+    <section id="end">
+      <div class="container-fluid">
+        <div class="row">
+
+
+          <div class="col-md-12 pad end-color">
+              <p>Science</p>
+          </div>
+
+
+        </div>
+        </div></section>
+
+
+           <!-- Poll -->
+    <section id="poll">
+      <div class="container-fluid poll-color">
+        <div class="row">
+
+          <div class="col-md-2 pad">
+              <h3>Poll</h3>
+          </div>
+          <div class="col-md-5 pad">
+            <h3> Do you believe?</h3>
+            <p id="results">
+              total: 0
+              yes: 0
+              no: 0
+            </p>
+            <button type="button" id="yes-button">Yes</button>
+            <button type="button" id="no-button">No</button>
+          </div>
+               <div class="col-md-5 pad">
+                   <p class="text-light"> </p>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <script>
+
+var yes = 0;
+var no = 0;
+
+function refreshResults () {
+  var results = document.getElementById('results');
+  results.innerHTML = 'total: ' + (yes + no);
+  results.innerHTML += '<br />yes: ' + yes;
+  results.innerHTML += '<br />no: ' + no;
+}
+
+document.getElementById('yes-button').addEventListener('click', function () {
+  yes++;
+  refreshResults();
+});
+
+document.getElementById('no-button').addEventListener('click', function () {
+  no++;
+  refreshResults();
+});
+
+    </script>
+         <script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+    <!-- Mapbox GL -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/0.50.0/mapbox-gl.js'></script>
+
+	<!-- Custom JavaScript -->
+	<script>
+	// SIGN UP FOR YOUR OWN MAPBOX ACCESS TOKEN!
+	// https://www.mapbox.com/signup/
+
+	// KATI'S MAPBOX ACCESS TOKEN
+	mapboxgl.accessToken = 'pk.eyJ1Ijoia2F0aXNzIiwiYSI6ImNqbnZ1OTF1MjBqZ2ozcXJ3bGVjOWt5emQifQ.PhQCwXX8SbSG835DeKol2Q';
+
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/katiss/cjrkxksej22ox2toy59imfueq',
+		center: [-82.372641, 40.210250],
+		zoom: 6.0
+	});
+
+	// Add zoom and rotation controls to the map.
+	map.addControl(new mapboxgl.NavigationControl());
+
+	// array of data objects for the locations
+	var locations = [{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				// location
+				"coordinates": [-81.867130, 39.336550]
+			},
+			"properties": {
+				// label
+				"title": "Haga Ridge",
+				// icon name
+				"icon": "squatchfoot"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-84.134956, 39.019371]
+			},
+			"properties": {
+				"title": "East Fork State Park",
+				"icon": "squatchfoot"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-80.900092, 40.080627]
+			},
+			"properties": {
+				"title": "St. Clairsville",
+				"icon": "a"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-118.24445541498162, 34.03142575184479]
+			},
+			"properties": {
+				"title": "Los Angeles",
+				"icon": "a"
+			}
+		}
+	];
+
+	map.on('load', function() {
+
+		// show lat, lng for clicked location in console
+		map.on('click', function(e) {
+			console.log('map zoom', map.getZoom());
+			console.log('map center', map.getCenter().lng + ', ' + map.getCenter().lat);
+			console.log('click loc', e.lngLat.lng + ', ' + e.lngLat.lat);
+		});
+
+		// add geojson layer and style layout for the location icons
+		map.addLayer({
+			"id": "points",
+			"type": "symbol",
+			"source": {
+				"type": "geojson",
+				"data": {
+					"type": "FeatureCollection",
+					"features": locations
+				}
+			},
+			"layout": {
+				"icon-image": "{icon}-15",
+				"icon-size": 1.5,
+				"text-field": "{title}",
+				"text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+				"text-offset": [0, 0.8],
+				"text-anchor": "top"
+			}
+		});
+	});
+
+	// activate the buttons to fly to locations
+	$('#btn1').click(function() {
+		map.flyTo({
+			center: [-81.867130, 39.3365506],
+			zoom: 10
+		});
+	});
+
+	$('#btn2').click(function() {
+		map.flyTo({
+			center: [-84.134956, 39.019371],
+			zoom: 12,
+			curve: 0.9, // default curve is 1.42
+			speed: 1.0 // default speed is 1.2
+		});
+	});
+
+	$('#btn3').click(function() {
+		map.flyTo({
+			center: [-80.900092, 40.080627],
+			zoom: 12,
+			curve: 0.9,
+			speed: 1.0
+		});
+	});
+
+	$('#btn4').click(function() {
+		map.flyTo({
+			center: [-82.372641, 40.210250],
+			zoom: 6.0
+		});
+	});
+
+</script>
+  </body>
+</html>
